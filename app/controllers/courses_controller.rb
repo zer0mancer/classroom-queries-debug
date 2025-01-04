@@ -32,7 +32,7 @@ class CoursesController < ApplicationController
     @course = Course.where({ :id => the_id }).at(0)
 
     @course.title = params.fetch("query_title")
-    @course.term_offered = params.fetch("query_term_offered")
+    @course.term_offered = params.fetch("query_term")
     @course.department_id = params.fetch("query_department_id")
 
     if @course.valid?
